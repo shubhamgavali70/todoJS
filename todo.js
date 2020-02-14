@@ -15,10 +15,14 @@ function addItem(){
     ul = document.getElementById('list');
     var textnode = document.createTextNode(item);
 
-    if(item == ""){
-        alert('Please enter text');
+    if(item == ''){
+        // let p = document.createElement('p')
+        // let alertVal = document.createTextNode("Please enter some value")
+        // p.appendChild(alertVal)
+        // document.querySelector('#input').appendChild(p)
+        let x = document.getElementById('input')
+        x.insertAdjacentHTML('afterend','<p style="color:red">Please enter some value</p>')
         return false;
-        //assignment
     }
     else{
         li = document.createElement('li');
@@ -44,11 +48,13 @@ function addItem(){
 
 
         input.value ='';
+        return true
     }
+    
 }
 
 function removeItem(){
-    console.log("Remove button clicked");
+    //console.log("Remove button clicked");
     li = ul.children;
     for (let index = 0; index < li.length; index++) {
         while (li[index] && li[index].children[0].checked) {
