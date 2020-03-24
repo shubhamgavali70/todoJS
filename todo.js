@@ -35,7 +35,10 @@ function addItem(){
         //label
         var label = document.createElement('label');
         label.setAttribute('for','item');
-
+        // <ul id="list">
+           //     <li class="mycheck"> <input type="checkbox" id="check"> <label>Complete the course</label> </li>
+             //   <li class="mycheck"> <input type="checkbox" id="check" checked> <label>Do some exercise</label> </li>
+        //  </ul>
         //add these element on web page
         ul.appendChild(label);
         li.appendChild(checkbox);
